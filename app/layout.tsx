@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import './globals.css'
 
 export const metadata: Metadata = {
   title: 'PAKT - Suppression de Compte',
@@ -13,6 +12,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+      <head>
+        <style>{`
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          html, body {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #fff;
+          }
+          body {
+            padding: 20px;
+          }
+          @media (max-width: 640px) {
+            body {
+              padding: 15px;
+            }
+          }
+        `}</style>
+      </head>
       <body>{children}</body>
     </html>
   )
